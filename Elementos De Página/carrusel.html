@@ -1,0 +1,142 @@
+<!-- INCIO DE CARRUSEL -->
+<style>
+  #carrusel {
+    width: 100vw;
+    height: 90vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .carruselImagen {
+    flex-shrink: 0;
+    width: 100vw;
+    z-index: 1;
+    display: none;
+  }
+
+  #carruselContenido {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+    left: -100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  #carruselLeft {
+    height: 7.5%;
+    aspect-ratio: 1;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    transform: rotate(-45deg);
+    cursor: pointer;
+  }
+
+  #carruselRight {
+    height: 7.5%;
+    aspect-ratio: 1;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    transform: rotate(-225deg);
+    cursor: pointer;
+  }
+
+  #carruselLeft:hover {
+    border-top: 3px solid var(--secondaryColor);
+    border-left: 3px solid var(--secondaryColor);
+  }
+
+  #carruselRight:hover {
+    border-top: 3px solid var(--secondaryColor);
+    border-left: 3px solid var(--secondaryColor);
+  }
+
+  #carruselInfo {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #carruselTitulo {
+    font-family: var(--mainFont);
+    font-size: 5.5vh;
+    color: var(--secondaryColor);
+    margin-bottom: 4vh;
+    text-align: center;
+  }
+
+  #carruselTexto {
+    font-family: var(--otherFont);
+    font-size: 2.5vh;
+    color: black;
+  }
+</style>
+<!-- CAMBIAR AQUI: Cambiar X por el número de su sección -->
+<div id="seccionX">
+  <!-- FIN DE CAMBIO -->
+  <div id="carrusel">
+    <!-- CAMBIAR AQUI: cambiar el 'src' al enlace de la imagen -->
+    <img
+      id="imagen0"
+      class="carruselImagen"
+      src="https://img.europapress.es/fotoweb/fotonoticia_20230308081647_1200.jpg"
+    />
+    <!-- FIN DE CAMBIO -->
+    <!-- CAMBIAR AQUI: cambiar el 'src' al enlace de la imagen -->
+    <img
+      id="imagen1"
+      class="carruselImagen"
+      src="https://www.gaceta.unam.mx/wp-content/uploads/2021/03/210301-aca6-des-f1-igualdad-genero.jpg"
+    />
+    <!-- FIN DE CAMBIO -->
+    <!-- CAMBIAR AQUI: cambiar el 'src' al enlace de la imagen -->
+    <img
+      id="imagen2"
+      class="carruselImagen"
+      src="https://divulgaciondinamica.es/wp-content/uploads/2021/10/Curso-de-Genero-e-Igualdad-divulgacion-dinamica.jpg"
+    />
+    <!-- FIN DE CAMBIO -->
+    <div id="carruselContenido">
+      <div id="carruselLeft" onclick="changeImage(-1)"></div>
+      <div id="carruselInfo">
+        <!-- CAMBIAR AQUI: Cambiar Titulo y Texto -->
+        <div id="carruselTitulo"></div>
+        <div id="carruselTexto">
+          
+        </div>
+        <!-- FIN DE CAMBIO -->
+      </div>
+      <div id="carruselRight" onclick="changeImage(1)"></div>
+    </div>
+  </div>
+</div>
+<script>
+  var image1 = document.getElementById("imagen0");
+  var image2 = document.getElementById("imagen1");
+  var image3 = document.getElementById("imagen2");
+
+  var currentImage = 0;
+
+  document.getElementById("imagen0").style.display = "flex";
+
+  function changeImage(num) {
+    image1.style.display = "none";
+    image2.style.display = "none";
+    image3.style.display = "none";
+
+    currentImage = (3 + (currentImage + num)) % 3;
+
+    document.getElementById("imagen" + currentImage).style.display = "flex";
+  }
+</script>
+<!-- FIN DE CARRUSEL -->

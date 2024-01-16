@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- CAMBIAR AQUI: Cambiar a Titulo de Proyecto -->
+    <title>Igualdad de Genero</title>
+    <!-- FIN DE CAMBIO -->
+    <link
+      rel="shortcut icon"
+      href="plantilla-inicial-archivos/desarollosos.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="plantilla-inicial-archivos/desarollosos.png"
+      type="image/x-icon"
+    />
+    <style>
+      /* CAMBIAR AQUI (OPCIONAL): Pueden Importar Fuentes Distintas*/
+@font-face {
+  font-family: mainFont;
+  src: url(Stay\ and\ Shine.ttf);
+}
+
+
+      /* FIN DE CAMBIO */
+
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        overflow-y: overlay;
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        /* CAMBIAR AQUI (OPCIONAL): Pueden Cambiar los colores usando Hex Values y las Fuentes (deben corresponder a sus importes)*/
+        --mainColor: #e885f3;
+        --secondaryColor: #74b0f5;
+        --thirdColor: #72aef3;
+        --mainFont: mainFont;
+        --otherFont: Georgia, 'Times New Roman', Times, serif;;
+        /* FIN DE CAMBIO */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- CAMBIAR AQUI: LLENAR DE COSAS -->
+    <!-- INICIO DE ENCABEZADO -->
+<style>
+  #encabezado {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  #titulo {
+    height: 8vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  #nombre {
+    font-family: var(--mainFont);
+    font-size: 4vh;
+    color: var(--mainColor);
+    margin-left: 1vw;
+  }
+
+  #menu {
+    height: 8vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .boton {
+    height: 6vh;
+    min-width: calc(6vh * 2.5);
+    font-size: 3vh;
+    color: var(--secondaryColor);
+    font-weight: 400;
+    font-family: var(--otherFont);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .boton:hover {
+    color: var(--thirdColor);
+  }
+</style>
+<div id="encabezado">
+  <div id="titulo">
+    <img height="80%" src="plantilla-inicial-archivos/desarollosos.png" />
+    <!-- CAMBIAR AQUI: Cambiar 'Nombre de Proyecto' por el nombre de su Meta-->
+    <div id="nombre">Igualdad de Genero</div>
+    <!-- FIN DE CAMBIO -->
+  </div>
+  <div id="menu">
+    <!-- CAMBIAR AQUI: Cambiar el Texto de los Botones ('Boton 1' etc.) y la cantidad de Botones -->
+    <a href="#seccion1" class="boton"><img height="100%" src="https://cdn-icons-png.flaticon.com/512/32/32175.png
+      "></a>
+    <a href="#seccion2" class="boton"><img height="100%" src="https://cdn-icons-png.flaticon.com/512/30/30412.png
+
+      "></a>
+    <a href="#seccion3" class="boton"><img height="100%" src="https://cdn-icons-png.flaticon.com/512/2345/2345570.png
+      "></a>
+    <!-- FIN DE CAMBIO -->
+  </div>
+</div>
+<!-- FIN DE ENCABEZADO -->
+<!-- INCIO DE CARRUSEL -->
+<style>
+  #carrusel {
+    width: 100vw;
+    height: 90vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .carruselImagen {
+    flex-shrink: 0;
+    width: 100vw;
+    z-index: 1;
+    display: none;
+  }
+
+  #carruselContenido {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+    left: -100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  #carruselLeft {
+    height: 7.5%;
+    aspect-ratio: 1;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    transform: rotate(-45deg);
+    cursor: pointer;
+  }
+
+  #carruselRight {
+    height: 7.5%;
+    aspect-ratio: 1;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    transform: rotate(-225deg);
+    cursor: pointer;
+  }
+
+  #carruselLeft:hover {
+    border-top: 3px solid var(--secondaryColor);
+    border-left: 3px solid var(--secondaryColor);
+  }
+
+  #carruselRight:hover {
+    border-top: 3px solid var(--secondaryColor);
+    border-left: 3px solid var(--secondaryColor);
+  }
+
+  #carruselInfo {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #carruselTitulo {
+    font-family: var(--mainFont);
+    font-size: 5.5vh;
+    color: var(--secondaryColor);
+    margin-bottom: 4vh;
+    text-align: center;
+  }
+
+  #carruselTexto {
+    font-family: var(--otherFont);
+    font-size: 2.5vh;
+    color: black;
+  }
+</style>
+<!-- CAMBIAR AQUI: Cambiar X por el número de su sección -->
+<div id="seccionX">
+  <!-- FIN DE CAMBIO -->
+  <div id="carrusel">
+    <!-- CAMBIAR AQUI: cambiar el 'src' al enlace de la imagen -->
+    <img
+      id="imagen0"
+      class="carruselImagen"
+      src="https://img.europapress.es/fotoweb/fotonoticia_20230308081647_1200.jpg"
+    />
+    <!-- FIN DE CAMBIO -->
+    <!-- CAMBIAR AQUI: cambiar el 'src' al enlace de la imagen -->
+    <img
+      id="imagen1"
+      class="carruselImagen"
+      src="https://www.gaceta.unam.mx/wp-content/uploads/2021/03/210301-aca6-des-f1-igualdad-genero.jpg"
+    />
+    <!-- FIN DE CAMBIO -->
+    <!-- CAMBIAR AQUI: cambiar el 'src' al enlace de la imagen -->
+    <img
+      id="imagen2"
+      class="carruselImagen"
+      src="https://divulgaciondinamica.es/wp-content/uploads/2021/10/Curso-de-Genero-e-Igualdad-divulgacion-dinamica.jpg"
+    />
+    <!-- FIN DE CAMBIO -->
+    <div id="carruselContenido">
+      <div id="carruselLeft" onclick="changeImage(-1)"></div>
+      <div id="carruselInfo">
+        <!-- CAMBIAR AQUI: Cambiar Titulo y Texto -->
+        <div id="carruselTitulo"></div>
+        <div id="carruselTexto">
+          
+        </div>
+        <!-- FIN DE CAMBIO -->
+      </div>
+      <div id="carruselRight" onclick="changeImage(1)"></div>
+    </div>
+  </div>
+</div>
+<script>
+  var image1 = document.getElementById("imagen0");
+  var image2 = document.getElementById("imagen1");
+  var image3 = document.getElementById("imagen2");
+
+  var currentImage = 0;
+
+  document.getElementById("imagen0").style.display = "flex";
+
+  function changeImage(num) {
+    image1.style.display = "none";
+    image2.style.display = "none";
+    image3.style.display = "none";
+
+    currentImage = (3 + (currentImage + num)) % 3;
+
+    document.getElementById("imagen" + currentImage).style.display = "flex";
+  }
+</script>
+<!-- FIN DE CARRUSEL -->
+<!-- INICIO DE SECCION DERECHA -->
+<style>
+  .derecha {
+    width: 100vw;
+    min-height: 75vh;
+    display: flex;
+    box-sizing: border-box;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+  }
+  
+
+  .derechaRight {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .derechaTitulo {
+    font-family: var(--mainFont);
+    color: var(--secondaryColor);
+    font-size: 4.5vh;
+    max-width: 80%;
+    margin-bottom: 4vh;
+    text-align: center;
+  }
+
+  .derechaTexto {
+    font-family: var(--otherFont);
+    color: black;
+    font-size: 2.5vh;
+    max-width: 80%;
+  }
+
+  .derechaLeft {
+    width: 50%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .derechaImagen {
+    width: 80%;
+  }
+</style>
+<!-- CAMBIAR AQUI: Cambiar X por el número de su sección -->
+<div id="seccion1">
+  <div class="derecha">
+    <div class="derechaLeft">
+      <img
+        class="derechaImagen"
+ src="https://www.unison.mx/noticias/img-gde/30202.jpg"
+      />
+    </div>
+    <div class="derechaRight">
+      <!-- CAMBIAR AQUI: Cambiar el Titulo y el Texto -->
+      <div class="derechaTitulo">¿Que es la igualdad de genero?</div>
+      <div class="derechaTexto">
+      <p>La politica nacional de la igualdad entre mujeres y hombres es un avance sustantivo en nuestro pais ya
+       que establece las acciones del gobierno para lograr igualdad entre genros y los hambitos politicos,
+       economico,social,laboral,cultural e institucional. la igualdad de genro implica que todas las personas
+       tengan los mismos derechos,recursos y oportunidades independientemente de su identidad de genero
+       y sean tratadas con el mismo respeto en todos los aspectos de la vida cotidiana:trabajo,salud,educación</p> 
+      
+       <h3>¿Porque deberia importarme la igualdad de genero?</h3>
+       independientemente del lugar donde vivimos,laigualdad de genero es un derecho humano fundamental.
+       Promover la igualdad de genero es esencial en todos los ambitos de una sociedad sana:desde la 
+       reduccion  de la pobreza hasta la produccin de la salud
+
+      </div>
+      <!-- FIN DE CAMBIO -->
+    </div>
+  </div>
+</div>
+<!-- FIN DE CAMBIO -->
+<!-- FIN DE SECCION DERECHA -->
+<!-- INICIO DE SECCION IZQUIERDA -->
+<style>
+  .izquierda {
+    width: 100vw;
+    min-height: 75vh;
+    display: flex;
+    box-sizing: border-box;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+  }
+
+  .izquierdaLeft {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .izquierdaTitulo {
+    font-family: var(--mainFont);
+    color: var(--thirdColor);
+    font-size: 4.5vh;
+    max-width: 80%;
+    margin-bottom: 4vh;
+    text-align: center;
+  }
+
+  .izquierdaTexto {
+    font-family: var(--otherFont);
+    color: black;
+    font-size: 2.5vh;
+    max-width: 80%;
+  }
+
+  .izquierdaRight {
+    width: 50%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .izquierdaImagen {
+    width: 80%;
+  }
+</style>
+<!-- CAMBIAR AQUI: Cambiar X por el número de su sección -->
+<div id="seccion2">
+  <div class="izquierda">
+    <div class="izquierdaLeft">
+      <!-- CAMBIAR AQUI: Cambiar el Titulo y el Texto -->
+      <div class="izquierdaTitulo">DATOS CURIOSOS</div>
+      <div class="izquierdaTexto">
+        existe el dia mundial de la igualdad de genero (acercado mas a la lucha de las mujeres)
+        65 países sufrieron graves desigualdades de género,destacando
+     particurmente 48 cosas consentrados principalmente en África y Asia.El 61% de los conflictos 
+     armados para los que existían datos sobre equidad de género tuvieron lugar en contextos 
+     graves desigualdades.
+     Durante el año 2014 se constató la utilización de la violencia sexual en contextos de conflicto 
+     armando y tensión como Siria,RCA,Somalia,Egipto o Mayanmar,entre otros.
+     Se celebró una cumbre de alto nivel en Londres sobre la violencia sexual los conflictos armados,
+     con  un balance desigual por la exclusión de la sociedad civil y la ambigüedad de los compromisos 
+     adquirirdos por los gobiernos.
+     Las mujeres participaron activamente en las negosaciones de paz formales Filipinas y Colombia
+     con una agenda de igualdad de género.En Colombia se creo las subcomisión de género para
+     la mesa de las negosaciones.
+      </div>
+      <!-- FIN DE CAMBIO -->
+    </div>
+    <div class="izquierdaRight">
+      <img
+        class="izquierdaImagen"
+        src="https://gaceta.politicas.unam.mx/wp-content/uploads/2021/09/Fuente-COPARMEX-Jalisco-1-626x340.jpg"
+      />
+    </div>
+  </div>
+</div>
+<!-- FIN DE CAMBIO -->
+<!-- FIN DE SECCION IZQUIERDA -->
+
+  <!-- FIN DE CAMBIO -->
+  <html>
+    <!-- INICIO DE SECCION DERECHA -->
+    <style>
+      .derecha {
+        width: 100vw;
+        min-height: 75vh;
+        display: flex;
+        box-sizing: border-box;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        padding-left: 3.5vw;
+        padding-right: 3.5vw;
+      }
+      
+    
+      .derechaRight {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .derechaTitulo {
+        font-family: var(--mainFont);
+        color: var(--secondaryColor);
+        font-size: 4.5vh;
+        max-width: 80%;
+        margin-bottom: 4vh;
+        text-align: center;
+      }
+    
+      .derechaTexto {
+        font-family: var(--otherFont);
+        color: black;
+        font-size: 2.5vh;
+        max-width: 80%;
+      }
+    
+      .derechaLeft {
+        width: 50%;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .derechaImagen {
+        width: 80%;
+      }
+    </style>
+    <!-- CAMBIAR AQUI: Cambiar X por el número de su sección -->
+    <div id="seccion3">
+      <div class="derecha">
+        <div class="derechaLeft">
+          <img
+            class="derechaImagen"
+     src="https://img.freepik.com/fotos-premium/mentira-masculina-femenina-rompecabezas-concepto-sexo-pareja-familia_96727-2745.jpg"
+          />
+        </div>
+        <div class="derechaRight">
+          <!-- CAMBIAR AQUI: Cambiar el Titulo y el Texto -->
+          <div class="derechaTitulo">SOLUCIONES</div>
+          <div class="derechaTexto">
+          <p>SOLUCIONES
+            <p7>Estas acciones tales como garantizar la igualdad de remuneración para los mismos 
+              cargos (en el sector privado,publico y tercer sectro) y dividir las tareas domesticas
+              dentro de la casa pueden ayudar a conbatir el problema.Hemos preparados una serie de 
+              contenidos para que conozcas como atribuir un mundo mas justo en el dia a dia,desdela 
+              infancia y la adolesencia.Es el tercer articulo de la serie.
+          
+              Estas son algunas pequeñas acciones para favorecer la igualdad de genero 
+              1 Conpartir el cuidado 
+              2 Denunciar los casos de sexismo y aacoso
+              3 rechazar el bienestar de genero
+              4 Exigir una cultura de igualldad en el trabajo
+              5 Ejercer tus derechos politicos 
+              6 Comprar con resposabilidad
+              7 Ampliar la cantidad de libros,peliculas y otros medios feministas
+              8 Enseñarles a las niñas e niños lo valiosos que son
+              9 Respetar las decisiones de las demas personas</p7>
+        
+    
+          </div>
+          <!-- FIN DE CAMBIO -->
+        </div>
+      </div>
+    </div>
+    <!-- FIN DE CAMBIO -->
+    <!-- FIN DE SECCION DERECHA -->
+    <!-- INICIO DE PIE -->
+<style>
+  #pieDePagina {
+    width: 100vw;
+    height: 30vh;
+    background: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .pieDePaginaTexto {
+    font-family: var(--otherFont);
+    color: rgb(255, 255, 255);
+    font-size: 2vh;
+    text-align: center;
+  }
+</style>
+<div id="pieDePagina">
+  <img
+    width="5%"
+    src="https://www.filepicker.io/api/file/103EiFtRQ1qk56Umw2nA"
+  />
+  <!-- CAMBIAR AQUI: Cambiar los "Nombre"s por sus nombres -->
+  <div class="pieDePaginaTexto">
+   PATRONES HERMOSO,  
+   CREADORES:
+   LUPITA fLORES,
+   MELI JUAREZ Y
+   ALEXA CASTELLANOS
+
+  </div>
+  <!-- FIN DE CAMBIO -->
+  <div class="pieDePaginaTexto">
+    
+  </div>
+</div>
+<!-- FIN DE PIE -->
+
+    
+    </html>
+
+
+    <!-- FIN DE CAMBIO -->
+  </body>
+</html>
